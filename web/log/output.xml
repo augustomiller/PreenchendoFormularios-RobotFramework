@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1 (Python 3.9.6 on darwin)" generated="20210813 20:32:56.946" rpa="false" schemaversion="2">
+<suite id="s1" name="Login Form" source="/Users/maicmiller/Documents/GitHub/PreenchendoFormularios-RobotFramework/web/tests/login_form.robot">
+<test id="s1-t1" name="CN-1">
+<kw name="Nova sessão" library="base" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210813 20:32:57.224" level="INFO">Opening browser 'chrome' to base url 'https://training-wheels-protocol.herokuapp.com/'.</msg>
+<status status="PASS" starttime="20210813 20:32:57.224" endtime="20210813 20:33:01.514"/>
+</kw>
+<status status="PASS" starttime="20210813 20:32:57.223" endtime="20210813 20:33:01.515"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${url}/login</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20210813 20:33:01.518" level="INFO">Opening url 'https://training-wheels-protocol.herokuapp.com//login'</msg>
+<status status="PASS" starttime="20210813 20:33:01.516" endtime="20210813 20:33:01.885"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:input[name=username]</arg>
+<arg>stark</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210813 20:33:01.888" level="INFO">Typing text 'stark' into text field 'css:input[name=username]'.</msg>
+<status status="PASS" starttime="20210813 20:33:01.886" endtime="20210813 20:33:02.147"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:input[name=password]</arg>
+<arg>jarvis!</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210813 20:33:02.148" level="INFO">Typing text 'jarvis!' into text field 'css:input[name=password]'.</msg>
+<status status="PASS" starttime="20210813 20:33:02.147" endtime="20210813 20:33:02.292"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>class:btn-login</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210813 20:33:02.293" level="INFO">Clicking element 'class:btn-login'.</msg>
+<status status="PASS" starttime="20210813 20:33:02.292" endtime="20210813 20:33:02.693"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Olá, Tony Stark. Você acessou a área logada!</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20210813 20:33:02.719" level="INFO">Current page contains text 'Olá, Tony Stark. Você acessou a área logada!'.</msg>
+<status status="PASS" starttime="20210813 20:33:02.693" endtime="20210813 20:33:02.720"/>
+</kw>
+<kw name="Encerra sessão" library="base" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210813 20:33:02.938" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210813 20:33:02.722" endtime="20210813 20:33:02.938"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210813 20:33:02.938" endtime="20210813 20:33:03.047"/>
+</kw>
+<status status="PASS" starttime="20210813 20:33:02.720" endtime="20210813 20:33:03.048"/>
+</kw>
+<status status="PASS" starttime="20210813 20:32:57.221" endtime="20210813 20:33:03.048"/>
+</test>
+<status status="PASS" starttime="20210813 20:32:56.954" endtime="20210813 20:33:03.052"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Login Form">Login Form</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
